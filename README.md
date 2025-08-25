@@ -1,9 +1,65 @@
 # MLOpsDemo
-MLOPS Demo Code
+This repository contains MLOPS Demo Code and Documentation
 # MLOPS Module
 
 ## Introduction to MLOPS:
 
+From the Demo: According to a Gartner & other research studies, close to 90% of models never make it to production i.e, Only 1 in 10 Machine Learning Models gets deployed to Production.
+
+### Definition:
+MLOPS is about efficiently deploying the models to solve real-world problems. It is the intersection of ML and Operations.
+
+MLOPS aims to bridge the gap between development and deployment.
+
+### Importance:
+
+MLOPS provides a standard process/framework for the ML lifecycle to follow. It brings together disparate processes and tools into a unified workflow
+
+MLOPS Benefits:
+- Faster time to market
+- Improved Productivity
+- Efficient Model Deployment
+- Reduce Risk of Manual Errors
+- Consistency
+- Scalability
+- Compliance
+- Fosters Collaboration
+
+### Evolution from Devops to MLOPS:
+
+MLOPS extends Devops practices to Machine Learning as traditional software development practices falls short due to the dynamic nature of ML Models.
+
+Core Principles:
+- Versioning
+- Continuous Integration
+- Continuous Delivery/Deployment
+- Continuous Training
+- Continuous Monitoring
+- Reproducibility
+
+
+### Key Similarities and Differences:
+
+##### Similarties:
+- Automation: In DevOps, automation often revolves around code deployment and infrastructure provisioning, while MLOps extends this automation to model training and deployment
+- Collaboration: DevOps teams bring together developers and IT operations, while MLOps bridges the gap between data scientists and operations teams
+- Continous Integration and Continous Delivery (CI-CD): CI/CD principles are fundamental to both DevOps and MLOps. They ensure that changes are tested and deployed systematically, reducing the risk of errors
+
+##### Differences:
+- Nature of Artifacts
+- Testing and Data Quality
+- Model Drift and Monitoring
+- Continous Training
+- Data Governance
+
+### MLOPS Maturity Levels:
+- Level 0: No Automation
+- Level 1: Semi-Automation
+- Level 2: Full Automation
+
+References:
+- [MLOPS Maturity Levels](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+- [What is MLOPS ?](https://aws.amazon.com/what-is/mlops/)
 
 ## MLOPS Tools Overview:
 
@@ -77,7 +133,7 @@ https://github.com/aws/amazon-sagemaker-examples/blob/main/introduction_to_amazo
 
 #### AWS Sagemaker Jargon:
 
-Sagemaker Vs Bedrock
+Sagemaker Vs Bedrock: While Sagemaker is focussed more on traditional ML Models, Bedrock is focussed towards more GenAI and Large Language Models(LLMs)
 
 - Studio: Comprehensive Web-Based IDE for Machine Learning end-to-end Development
 
@@ -99,3 +155,4 @@ Sagemaker Vs Bedrock
 ## CI-CD for ML Pipelines:
 
 TBD
+
