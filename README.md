@@ -40,7 +40,7 @@ Core Principles:
 
 ### Key Similarities and Differences:
 
-##### Similarties:
+##### Similarities:
 - Automation: In DevOps, automation often revolves around code deployment and infrastructure provisioning, while MLOps extends this automation to model training and deployment
 - Collaboration: DevOps teams bring together developers and IT operations, while MLOps bridges the gap between data scientists and operations teams
 - Continous Integration and Continous Delivery (CI-CD): CI/CD principles are fundamental to both DevOps and MLOps. They ensure that changes are tested and deployed systematically, reducing the risk of errors
@@ -151,6 +151,10 @@ Sagemaker Vs Bedrock: While Sagemaker is focussed more on traditional ML Models,
 - [Studio Vs Notebooks](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-comparison.html)
 - [Sagemaker Domain](https://docs.aws.amazon.com/sagemaker/latest/dg/gs-studio-onboard.html)
 - [MLFlow Tracking with Sagemaker](https://docs.aws.amazon.com/sagemaker-unified-studio/latest/userguide/sagemaker-experiments.xml.html)
+
+[Placeholder for SageMaker Demo]
+
+[Placeholder for SageMaker MLFlow]
 
 ## CI-CD for ML Pipelines:
 
