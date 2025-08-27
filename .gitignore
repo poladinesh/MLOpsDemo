@@ -1,5 +1,5 @@
 __pycache__/
-pyenv.cfg
+pyvenv.cfg
 src-container/__pycache__/
 src-container/.pytest_cache/
 src-container/venv/
@@ -12,3 +12,4 @@ src-container/include
 src-container/bin/
 src-container/lib/
 src-container/include/
+*.pkl
