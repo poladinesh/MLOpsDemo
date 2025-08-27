@@ -145,6 +145,10 @@ Sagemaker Vs Bedrock: While Sagemaker is focussed more on traditional ML Models,
 
 - HyperPod Clusters: SageMaker HyperPod clusters are purpose-built, scalable, and resilient clusters designed for accelerating large-scale distributed training and deployment of complex machine learning models like LLMs, diffusion models, and other foundation models
 
+Other Tools:
+
+Google Vertex AI, Azure Machine Learning, DVC for Data Version Control
+
 ##### References:
 - [AWS Sagemaker Studio](https://aws.amazon.com/sagemaker/ai/studio/)
 - [AWS Sagemaker Canvas](https://aws.amazon.com/sagemaker/ai/canvas/)
