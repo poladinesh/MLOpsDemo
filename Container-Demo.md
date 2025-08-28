@@ -75,6 +75,6 @@ Requires `docker login` # if not already logged in - requires dockerhub login
 
 11. Access the app at http://localhost:8000 or http://localhost:8000/docs
 
-12. Now we can deploy image anywhere we want, for example we can deploy this on a ECS Cluster
+12. Now we can deploy the container image anywhere we want making this platform/cloud-provider agnostic, for example we can deploy this on a ECS Cluster
 
 [Placeholder for Container Deployment on a AWS ECS Cluster]
