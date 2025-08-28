@@ -40,12 +40,17 @@
         
         docker build -t mlops-demo:v1 .
 
+>[!Important]
+Above command add the platform(architecture) type automatically based on where the `docker build` command is run. 
+
+To make sure it supports x86_64 architecture (which is more common) and not arm-based architecture use below command.
+
         docker buildx build --platform linux/amd64 -t mlops-demo:v2 .
 
 >[!Important]
 Please look at docs here [Multiplatform build](https://docs.docker.com/build/building/multi-platform/#build-multi-platform-images) if you are building on ARM-Based Laptops/Machines
 
->[!Caution] : Exit code 255 - architecture mismatch:
+>[!warning] : Exit code 255 - architecture mismatch:
     If the Docker image is built for a different architecture than the ECS cluster's underlying instances (e.g., x86_64 image on an ARM64 instance), it can lead to an "exec format error" and a 255 exit code.
 
 7. Tag & Push the Container Image with Container Registry Name (here, we use docker hub)
@@ -72,7 +77,3 @@ Requires `docker login` # if not already logged in - requires dockerhub login
 12. Now we can deploy image anywhere we want, for example we can deploy this on a ECS Cluster
 
 [Placeholder for Container Deployment on a AWS ECS Cluster]
-
->[!Note]
-    exit code 255 - architecture mismatch:
-    If the Docker image is built for a different architecture than the ECS cluster's underlying instances (e.g., x86_64 image on an ARM64 instance), it can lead to an "exec format error" and a 255 exit code.
