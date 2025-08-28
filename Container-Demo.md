@@ -51,6 +51,8 @@ Containers are:
         pip install -r requirements.txt
         uvicorn main:app --reload
 
+> [!NOTE]
+Before Containerizing the app, make sure to expose the app as an API Endpoint
 
 5. Containerize / Generate Dockerfile
 
