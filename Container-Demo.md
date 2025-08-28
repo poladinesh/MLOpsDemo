@@ -4,7 +4,27 @@
 - Python
 - Dockerhub Account - Register your free account at hub.docker.com
 
-### Steps to Containerize your App
+## Containers 101:
+
+- A Container Image is a package that bundles application code and all it dependencies
+- A Container is simply an isolated process with all of the files it needs to run
+- A Container is a running instance of a container image just like how an object is an instance of a class in OOP
+
+![Containers-Vs-VMs](./images/container-vs-vms.png)
+
+Containers are:
+- Portable: They can run in cloud, on-prem virtually anywhere
+- Light-Weight: Does not need a entire operating system (kernel, hardware driver, programs, GUI software etc)
+- Independent: Deleting a container does not affect other containers
+- Self-Contained: No dependencies on host machine
+- Isolated: They run in their own shells/space that other containers doesn't have access to
+
+### References:
+- [What is a container](https://www.docker.com/resources/what-container/)
+- [Containers 101](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
+
+
+## Steps to Containerize your App
 
 1. Clone the Repo
 
