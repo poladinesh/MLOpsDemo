@@ -50,6 +50,7 @@ To make sure it supports x86_64 architecture (which is more common) and not arm-
 >[!Important]
 Please look at docs here [Multiplatform build](https://docs.docker.com/build/building/multi-platform/#build-multi-platform-images) if you are building on ARM-Based Laptops/Machines
 
+
 >[!note] : Exit code 255 - architecture mismatch:
     If the Docker image is built for a different architecture than the ECS cluster's underlying instances (e.g., x86_64 image on an ARM64 instance), it can lead to an "exec format error" and a 255 exit code.
 
