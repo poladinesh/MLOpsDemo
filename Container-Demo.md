@@ -69,7 +69,8 @@ Requires `docker login` # if not already logged in - requires dockerhub login
 
         docker run -p 8000:8000 mlops-demo:v2
 
-> [!WARNING] : Exit code 255 - architecture mismatch:
+> [!WARNING] 
+> Exit code 255 - architecture mismatch:
     If the Docker image is built for a different architecture than the host system (e.g., x86_64 image on an ARM64 instance), it can lead to an "exec format error" and a 255 exit code.        
 
 11. Access the app at http://localhost:8000 or http://localhost:8000/docs
