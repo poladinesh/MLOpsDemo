@@ -166,3 +166,39 @@ Google Vertex AI, Azure Machine Learning, DVC for Data Version Control
 
 TBD
 
+## Deployment:
+
+Machine Learning Code can be deployed using the following methods:
+
+1) Containers:
+    - can be deployed to Sagemaker
+    - can be deployed to any container based platform such as 
+        - AWS: ECS, EKS, Beanstalk, Lightsail, Lambda, App Runner 
+        - Azure: Container Instances, Container Apps, AKS, App Service, Azure Functions
+        - GCP: Google CloudRun, GKE
+
+More details here [ContainerDocs](src-container/Container-Demo.md)
+
+2) AWS Sagemaker AI : called using SageMaker API Invoke Endpoint
+    - Realtime / hosted endpoint or hosted endpoint with ASG (underlying sagemaker using ec2 instances with docker to host the ml app): Real-time inference is ideal for inference workloads where you have interactive, low latency requirements.
+    - Serverless: Use Serverless Inference to deploy models without configuring or managing any of the underlying infrastructure. This option is ideal for workloads which have idle periods between traffic spurts and can tolerate cold starts.
+    - Batch Inference: Used for long-running Batch Transform jobs to handle large payloads using a batch strategy (mini-batches of up to 100 MB each)
+    - Asynchronous Inference: Queues incoming requests and processes them asynchronously. This option is ideal for requests with large payload sizes (up to 1GB), long processing times (up to one hour), and near real-time latency requirements.
+
+Sagemaker Python SDK
+
+Estimator: Encapsulates training on Sagemaker
+    - You start your training script by calling fit on Estimator
+Predictor - Provide real-time inference and transformation using Python data-types against a SageMaker endpoint
+Session: Provides a collection of methods for working with SageMaker resources
+
+https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html
+
+Autoscaling:
+https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html
+
+More details here [SagemakerDocs](src-sagemaker/SageMaker-Demo.mdSageMaker-Demo.md)
+
+3) Deploy to VM Instance:
+    - On AWS, make sure to use DeepLearning or ML AMI (Images) as they are designed for ML Workloads
+
