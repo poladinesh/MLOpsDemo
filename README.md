@@ -185,7 +185,8 @@ More details here [ContainerDocs](src-container/Container-Demo.md)
     - Batch Inference: Used for long-running Batch Transform jobs to handle large payloads using a batch strategy (mini-batches of up to 100 MB each)
     - Asynchronous Inference: Queues incoming requests and processes them asynchronously. This option is ideal for requests with large payload sizes (up to 1GB), long processing times (up to one hour), and near real-time latency requirements.
 
-Sagemaker Python SDK
+Alternative method:
+Jupyter Notebooks on Sagemaker using Sagemaker Python SDK
 
 Estimator: Encapsulates training on Sagemaker
     - You start your training script by calling fit on Estimator
