@@ -10,7 +10,7 @@
 - A Container is simply an isolated process with all of the files it needs to run
 - A Container is a running instance of a container image just like how an object is an instance of a class in OOP
 
-![Containers-Vs-VMs](./images/container-vs-vms.png)
+![Containers-Vs-VMs](../images/container-vs-vms.png)
 
 Containers are:
 - Portable: They can run in cloud, on-prem virtually anywhere
