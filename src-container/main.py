@@ -25,7 +25,7 @@ class CustomerInput(BaseModel):
 @app.get("/")
 def read_root():
     print("API is live now...")
-    return {"message": "Our Regression Model API is live"}
+    return {"Sierra AI says": "Our Regression Model API is live"}
 
 @app.post("/predict")
 def predict(data: CustomerInput):
@@ -37,4 +37,5 @@ def predict(data: CustomerInput):
         "visits_per_month": data.visits_per_month
     }])
     prediction = model.predict(input_data)[0]
+    print("Inference Prediction Type (Regression):", type(prediction))
     return {"Inference Prediction ": prediction}
