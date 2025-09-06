@@ -101,7 +101,7 @@ Requires `docker login` # if not already logged in - requires dockerhub login
 
 [Placeholder for Container Deployment on a AWS ECS Cluster]
 
-## Container Best Practices:
+## Best Practices:
 
 - For Base Images, Use tags such as Official, Verified Publisher or OSS
 - Use the following exec format in your Dockerfile, see why [here](https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/)
@@ -109,3 +109,5 @@ Requires `docker login` # if not already logged in - requires dockerhub login
                 CMD ["uvicorn", "main:app", "--host=0.0.0.0", "--port=8000"]
 
 - For all other best practices, see [here](https://docs.docker.com/build/building/best-practices/)
+
+- Regarding the Serialization error during our Office Hours we got, check this link for more explanation [here](https://stackoverflow.com/questions/71102658/how-can-i-return-a-numpy-array-using-fastapi)
