@@ -1,15 +1,31 @@
+# Python cache and virtual environments
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
 pyvenv.cfg
-src-container/__pycache__/
-src-container/.pytest_cache/
-src-container/venv/
 venv/
 .env
+
+# Ignore Python cache and venv at any depth
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/pyvenv.cfg
+**/venv/
+**/.env
+
+# macOS files
 .DS_Store
-src-container/bin
-src-container/lib
-src-container/include
-src-container/bin/
-src-container/lib/
-src-container/include/
+**/.DS_Store
+
+# Project-specific ignores
+**/.pytest_cache/
+**/bin/
+**/lib/
+**/include/
+
+# Model files
 *.pkl
+**/*.pkl
