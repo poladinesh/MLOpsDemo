@@ -100,3 +100,12 @@ Requires `docker login` # if not already logged in - requires dockerhub login
 12. Now we can deploy the container image anywhere we want making this platform/cloud-provider agnostic, for example we can deploy this on a ECS Cluster
 
 [Placeholder for Container Deployment on a AWS ECS Cluster]
+
+## Container Best Practices:
+
+- For Base Images, Use tags such as Official, Verified Publisher or OSS
+- Use the following exec format in your Dockerfile, see why [here](https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/)
+
+                CMD ["uvicorn", "main:app", "--host=0.0.0.0", "--port=8000"]
+
+- For all other best practices, see [here](https://docs.docker.com/build/building/best-practices/)
