@@ -16,6 +16,13 @@ on:
 env:
   # Set the AWS region to use for the workflow
   AWS_REGION: us-east-1
+  SG_ROLE: ${{ secrets.AWS_SG_ROLE }}
+  WORK_DIRECTORY: data
+  PREFIX: DEMO-scikit-iris-gus
+  FRAMEWORK_VERSION: 1.0-1
+  SCRIPT_PATH: train.py
+  INSTANCE_TYPE: ml.m5.large
+  INITIAL_INSTANCE_COUNT: 1
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,9 +40,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: Run a second one-line script
-        run: echo "getting current working directory and list of files in it"; pwd ; ls -lrt; hostname
-
       #To-Do
       # Sets up the AWS CLI with the credentials provided in the GitHub secrets
       # - name: Configure AWS Credentials
@@ -52,6 +56,30 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ env.AWS_REGION }}
 
+      # Setup Python 3.11
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      
+      - name: Install dependencies
+        working-directory: ./src-sagemaker
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      # Train Model
+      - name: Train Model
+        working-directory: ./src-sagemaker
+        run: |
+          python app.py
       # # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
       #   run: |
