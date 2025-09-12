@@ -162,10 +162,6 @@ Google Vertex AI, Azure Machine Learning, DVC for Data Version Control
 
 [Placeholder for SageMaker MLFlow]
 
-## CI-CD for ML Pipelines:
-
-TBD
-
 ## Deployment Methods:
 
 Machine Learning Code can be deployed using the following methods:
@@ -187,8 +183,59 @@ More details here [ContainerDocs](src-container/Container-Demo.md)
 Alternative method:
 Jupyter Notebooks on Sagemaker using Sagemaker Python SDK
 
-More details here [SagemakerDocs](src-sagemaker/SageMaker-Demo.mdSageMaker-Demo.md)
+More details here [SagemakerDocs](src-sagemaker/SageMaker-Demo.md)
 
 3) Deploy to VM Instance:
     - On AWS, make sure to use DeepLearning or ML AMI (Images) as they are designed for ML Workloads
+
+## CI-CD for ML Pipelines:
+
+Some of the Popular Choice of tools that can facilitate CI-CD Process in ML are:
+
+- Traditional CI-CD such as Github Actions, Azure Devops, Gitlab, Circle-CI
+- SageMaker Pipelines
+- KubeFlow Pipelines
+- Google Vertex AI
+- Continous Machine Learning (CML) (mostly used with DVC)
+- ClearML, BentoML etc
+
+[Placeholder for Sagemker CI-CD Demo using Github Actions]
+
+**What is Github Actions ?**
+
+GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production
+
+Github Actions Components:
+![alt text](https://docs.github.com/assets/cb-25535/mw-1440/images/help/actions/overview-actions-simple.webp)
+
+Workflow: a configurable automated process that runs one or more jobs
+
+Events: An event is a specific activity in a repository that triggers a workflow run
+
+Job: A job is a set of steps in a workflow that is executed on the same runner. Each step is either a shell script that will be executed, or an action that will be run
+
+Action: An action is a pre-defined, reusable set of jobs or code that performs specific tasks within a workflow
+
+Runner: A runner is a server that runs your workflows when they're triggered.
+
+## Monitoring & Alerting:
+
+### Drift Detection
+
+**Data Drift:** It is the change in statistical properties or distribution of the input data used by machine learning model over time, while the relationship between inputs and the target variable remains the same.
+
+Example: A Model trained on House Pricing
+
+**Concept Drift:** Concept drift occurs when the relationship between the input data and the target variable changes over the time.
+
+Example: Email Spam Detection
+
+Both forms of drift are critical to monitor and address to keep the machine learning models to be effective in real-world environments.
+
+### Metrics
+
+Read more about Metrics [here](./Metrics.md)
+
+## Additional Resources:
+- https://www.datacamp.com/tutorial/ci-cd-for-machine-learning
 
