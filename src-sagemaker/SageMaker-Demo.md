@@ -40,9 +40,6 @@
 - CI-CD
 
 
-
-
-
 ### Deployment Strategy:
 
 Deployment guardrails are a set of model deployment options in Amazon SageMaker AI Inference to update your machine learning models in production. More details [here](https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-guardrails.html)
@@ -84,3 +81,6 @@ https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html
 
 Inference Types:
 https://caylent.com/blog/sagemaker-inference-types
+
+Sagemaker Examples:
+https://github.com/aws/amazon-sagemaker-examples
